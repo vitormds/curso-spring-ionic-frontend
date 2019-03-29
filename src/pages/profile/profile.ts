@@ -5,6 +5,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { API_CONFIG } from '../../config/api.config';
 
+
 @IonicPage()
 @Component({
   selector: 'page-profile',
@@ -29,7 +30,15 @@ export class ProfilePage {
         this.cliente = response;
         this.getImageIfExists();
       },
-      error => {});
+      error => {
+        if(error.status == 403){
+          this.navCtrl.setRoot('HomePage');
+        }
+
+      });
+    }
+    else{
+      this.navCtrl.setRoot('HomePage');
     }
   }
   getImageIfExists() {
