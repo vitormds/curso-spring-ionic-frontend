@@ -16,10 +16,7 @@ export class HomePage {
   constructor(public navCtrl: NavController, public menu: MenuController, public auth: AuthService) {
 
   }
-
-  
-
-  
+ 
   ionViewWillEnter() {
     this.menu.swipeEnable(false);
     }
@@ -40,6 +37,11 @@ export class HomePage {
       this.navCtrl.setRoot('CategoriasPage');
     },
     error => {});
+  }
+
+  signup(){
+    console.log("passou");
+    this.navCtrl.push('SignupPage');
   }
 
 }
