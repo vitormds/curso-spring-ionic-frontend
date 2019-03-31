@@ -1,4 +1,4 @@
-import { AuthInterceptor, AuthInterceptorProvider } from './../interceptores/auth-interceptor';
+
 import { ClienteService } from './../services/domain/cliente.service';
 import { AuthService } from './../services/auth.service';
 import { CategoriaService } from './../services/domain/categoria.service';
@@ -11,6 +11,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { ErrorInterceptorProvider } from '../interceptores/error-interceptor';
 import { StorageService } from '../services/storage.service';
+import { AuthInterceptorProvider } from '../interceptores/auth-interceptor';
 
 @NgModule({
   declarations: [
